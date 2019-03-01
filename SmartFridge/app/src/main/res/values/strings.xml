@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SmartFridge</string>
+    <string name="step">put two eggs</string>
+    <string name="quote1">Do You Need Any Help ?</string>
+</resources>
