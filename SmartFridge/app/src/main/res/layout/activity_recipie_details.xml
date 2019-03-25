@@ -7,6 +7,7 @@
     >
 
     <ImageView
+        android:id="@+id/RecImage"
         android:layout_width="wrap_content"
         android:layout_height="293dp"
         android:layout_marginLeft="12dp"
@@ -14,8 +15,9 @@
         android:layout_marginTop="12dp"
         android:elevation="15dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/f3" />
+        android:src="@drawable/p5" />
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ingredient:"
@@ -25,6 +27,7 @@
         />
 
     <ListView
+        android:id="@+id/ingredientslist"
         android:layout_width="wrap_content"
         android:layout_height="170dp"/>
 
@@ -36,6 +39,7 @@
         android:textColor="@color/black"
         android:textSize="25sp" />
     <ListView
+        android:id="@+id/stepslist"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>

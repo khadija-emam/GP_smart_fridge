@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.khadija.smartfridge.Recipes.RecipiesActivity;
+
 public class CamScreen extends AppCompatActivity {
 
     @Override
@@ -14,7 +16,7 @@ public class CamScreen extends AppCompatActivity {
 
     }
     public void RecipiesButton (View view){
-        Intent RecipiesIntent =new Intent(this,Recipies.class);
+        Intent RecipiesIntent =new Intent(this, RecipiesActivity.class);
         startActivity(RecipiesIntent);
     }
 }
