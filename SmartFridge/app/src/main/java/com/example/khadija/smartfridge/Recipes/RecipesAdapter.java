@@ -14,9 +14,9 @@ import com.example.khadija.smartfridge.R;
 
 import java.util.ArrayList;
 
-public class RecipiesAdapter extends ArrayAdapter<RecipiesClass> {
+public class RecipesAdapter extends ArrayAdapter<RecipesClass> {
 
-    public RecipiesAdapter( Context context, int resource,  ArrayList<RecipiesClass> objects) {
+    public RecipesAdapter(Context context, int resource, ArrayList<RecipesClass> objects) {
         super(context, resource, objects);
 
     }
@@ -27,7 +27,7 @@ public class RecipiesAdapter extends ArrayAdapter<RecipiesClass> {
         View view =null;
         if (convertView == null)
             view = LayoutInflater.from(getContext()).inflate(R.layout.recipies_view, parent, false);
-             RecipiesClass item=getItem(position);
+             RecipesClass item=getItem(position);
             ImageView imageView=view.findViewById(R.id.RecImage);
             TextView RecName =view.findViewById(R.id.Recname);
             RecName.setText(item.getName());

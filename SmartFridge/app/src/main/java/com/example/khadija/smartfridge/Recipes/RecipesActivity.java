@@ -10,15 +10,15 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.example.khadija.smartfridge.R;
-import com.example.khadija.smartfridge.RecipiesDetails.RecipieDetailsActivity;
+import com.example.khadija.smartfridge.RecipesDetails.RecipieDetailsActivity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecipiesActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<RecipiesClass>> {
+public class RecipesActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<RecipesClass>> {
     private static final int RECIPIES_LOADER_ID =1;
-    private static final String LOG_TAG = RecipiesActivity.class.getName();
+    private static final String LOG_TAG = RecipesActivity.class.getName();
     View LoadingIndicator ;
 
     public static final String RECIPIES_URL ="";
@@ -38,14 +38,14 @@ public class RecipiesActivity extends AppCompatActivity implements LoaderManager
 
 
         GridView RgridView = findViewById(R.id.recipiesGrid);
-        final RecipiesAdapter adapter =new RecipiesAdapter(this,R.layout.recipies_view,new ArrayList<RecipiesClass>());
+        final RecipesAdapter adapter =new RecipesAdapter(this,R.layout.recipies_view,new ArrayList<RecipesClass>());
         RgridView.setAdapter(adapter);
         RgridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                RecipiesClass recipiesClass =adapter.getItem(position);
-                Intent RIntent=new Intent(RecipiesActivity.this, RecipieDetailsActivity.class);
-                RIntent.putExtra("RecipieKey", (Serializable) recipiesClass);
+                RecipesClass recipesClass =adapter.getItem(position);
+                Intent RIntent=new Intent(RecipesActivity.this, RecipieDetailsActivity.class);
+                RIntent.putExtra("RecipieKey", (Serializable) recipesClass);
                 startActivity(RIntent);
             }
         });
@@ -53,17 +53,17 @@ public class RecipiesActivity extends AppCompatActivity implements LoaderManager
     }
 
     @Override
-    public Loader<List<RecipiesClass>> onCreateLoader(int i, Bundle bundle) {
+    public Loader<List<RecipesClass>> onCreateLoader(int i, Bundle bundle) {
         return null;
     }
 
     @Override
-    public void onLoadFinished(Loader<List<RecipiesClass>> loader,List<RecipiesClass> RecipiesList) {
+    public void onLoadFinished(Loader<List<RecipesClass>> loader, List<RecipesClass> RecipiesList) {
 
     }
 
     @Override
-    public void onLoaderReset(Loader<List<RecipiesClass>> loader) {
+    public void onLoaderReset(Loader<List<RecipesClass>> loader) {
 
     }
 }

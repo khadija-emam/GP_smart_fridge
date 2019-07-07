@@ -1,4 +1,4 @@
-package com.example.khadija.smartfridge.RecipiesDetails;
+package com.example.khadija.smartfridge.RecipesDetails;
 
 public class StepsClass {
     int number;
